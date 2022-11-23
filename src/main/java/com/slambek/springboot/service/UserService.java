@@ -1,6 +1,6 @@
-package web.service;
+package com.slambek.springboot.service;
 
-import web.model.User;
+import com.slambek.springboot.model.User;
 
 import java.util.List;
 

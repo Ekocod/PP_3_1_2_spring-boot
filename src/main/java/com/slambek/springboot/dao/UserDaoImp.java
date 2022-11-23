@@ -1,7 +1,7 @@
-package web.dao;
+package com.slambek.springboot.dao;
 
+import com.slambek.springboot.model.User;
 import org.springframework.stereotype.Repository;
-import web.model.User;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;

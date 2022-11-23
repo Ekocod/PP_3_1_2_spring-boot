@@ -1,14 +1,14 @@
-package web.controller;
+package com.slambek.springboot.controller;
 
+import com.slambek.springboot.model.User;
+import com.slambek.springboot.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import web.model.User;
-import web.service.UserService;
 
 @Controller
-@RequestMapping("/users")
+@RequestMapping("/")
 public class UserController {
     private final UserService userService;
 
@@ -31,13 +31,13 @@ public class UserController {
     @PostMapping()
     public String saveCreatedUser(@ModelAttribute("user") User user) {
         userService.saveUser(user);
-        return "redirect:/users";
+        return "redirect:/";
     }
 
     @DeleteMapping("/{id}")
     public String deleteUser(@PathVariable int id) {
         userService.deleteUser(id);
-        return "redirect:/users";
+        return "redirect:/";
     }
 
     @GetMapping("/edit/{id}")
@@ -49,6 +49,6 @@ public class UserController {
     @PatchMapping("/{id}")
     public String updateUser(@PathVariable int id, @ModelAttribute("user") User user) {
         userService.updateUser(user, id);
-        return "redirect:/users";
+        return "redirect:/";
     }
 }

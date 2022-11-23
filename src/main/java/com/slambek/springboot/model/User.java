@@ -1,4 +1,4 @@
-package web.model;
+package com.slambek.springboot.model;
 
 import javax.persistence.*;
 import java.util.Objects;
